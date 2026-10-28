@@ -23,7 +23,7 @@ footer{padding:26px clamp(22px,5vw,76px);display:flex;justify-content:space-betw
 .more-text[open] .more-label:before{content:"收合"}
 .more-text[open] .more-label{font-size:0}
 .more-text[open] .more-label:before{font:600 12px var(--sans);letter-spacing:.12em}
-.more-text-body{position:relative;left:50%;transform:translateX(-50%);width:92vw;margin:24px 0 0;padding:24px clamp(18px,5vw,64px) 36px;background:var(--paper);border:1px solid var(--line)}
+.more-text-body{position:relative;left:50%;transform:translateX(-50%);width:80vw;margin:24px 0 0;padding:24px clamp(18px,5vw,64px) 36px;background:var(--paper);border:1px solid var(--line)}
 .more-text-body .prose,.more-text-body p{max-width:880px;margin:26px auto;font:400 clamp(17px,1.8vw,20px)/2 var(--serif);letter-spacing:.025em}
 .journey-copy,.correction-list{max-width:820px;margin:42px 0 0 110px}
 .journey-copy p{max-width:760px;font:400 17px/2 var(--serif);color:var(--ink)}
