@@ -34,7 +34,7 @@ window.WORK_DATA.versions.v1.sentenceSourceMap=[
 const matchedSentenceMap=[
 [[0,0]],
 [[1,0],[1,0],[1,0],[1,1],[1,2],[1,3]],
-[[1,4],[1,4]],
+[[1,4]],
 [[2,0],[2,0],[2,1]],
 [[3,0],[3,1],[3,2],[3,3]],
 [[4,0],[4,0],[4,0],[4,1]],
@@ -46,4 +46,7 @@ const matchedSentenceMap=[
 [[10,0]],
 [[11,0]]
 ];
-for(const key of ["v2","v3","final"]) window.WORK_DATA.versions[key].sentenceSourceMap=matchedSentenceMap;
+window.WORK_DATA.versions.v2.sentenceSourceMap=matchedSentenceMap;
+const matchedSplitMap=matchedSentenceMap.map(row=>row.map(pair=>pair.slice()));
+matchedSplitMap[2]=[[1,4],[1,4]];
+for(const key of ["v3","final"]) window.WORK_DATA.versions[key].sentenceSourceMap=matchedSplitMap;
