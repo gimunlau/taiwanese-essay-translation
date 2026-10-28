@@ -19,3 +19,31 @@ window.WORK_DATA.versions.v1.sentenceSourceMap={6:[8,9]};
 window.WORK_DATA.versions.v2.sourceMap=[0,1,1,2,3,4,5,6,7,8,9,10];
 window.WORK_DATA.versions.v3.sourceMap=[0,1,1,2,3,4,5,6,7,8,9,10];
 window.WORK_DATA.versions.final.sourceMap=[0,1,1,2,3,4,5,6,7,8,9,10];
+
+window.WORK_DATA.versions.v1.sourceMap=[0,1,3,4,5,6,9,11];
+window.WORK_DATA.versions.v1.sentenceSourceMap=[
+[[0,0]],
+[[1,0],[1,0],[1,1],[1,2],[1,3],[1,4]],
+[[3,0],[3,1],[3,2],[3,3]],
+[[4,0],[4,0],[4,1]],
+[[5,0],[5,0],[5,0],[5,1],[5,2]],
+[[6,0]],
+[[9,0],[9,1],[10,0]],
+[[11,0]]
+];
+const matchedSentenceMap=[
+[[0,0]],
+[[1,0],[1,0],[1,0],[1,1],[1,2],[1,3]],
+[[1,4]],
+[[2,0],[2,0],[2,1]],
+[[3,0],[3,1],[3,2],[3,3]],
+[[4,0],[4,0],[4,0],[4,1]],
+[[5,0],[5,0],[5,0],[5,1],[5,2]],
+[[6,0]],
+[[7,0],[7,1],[7,2],[7,3],[7,4]],
+[[8,0]],
+[[9,0],[9,1],[9,1]],
+[[10,0]],
+[[11,0]]
+];
+for(const key of ["v2","v3","final"]) window.WORK_DATA.versions[key].sentenceSourceMap=matchedSentenceMap;
