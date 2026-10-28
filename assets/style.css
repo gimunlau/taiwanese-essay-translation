@@ -34,9 +34,7 @@ footer{padding:26px clamp(22px,5vw,76px);display:flex;justify-content:space-betw
 .correction-list ins{text-decoration:none;border-bottom:2px solid #92a4a7;background:#e6eceb}
 \n@media(max-width:720px){.more-text-body{left:50%;transform:translateX(-50%);width:calc(100vw - 36px);margin:24px 0 0;padding:18px 18px 28px}.more-preview{font-size:17px;line-height:2}.more-label,.more-text[open] .more-label{margin-right:0}.journey-copy,.correction-list{margin-left:0}.correction-list p{grid-template-columns:1fr}.correction-list p>span{display:none}.more-text{margin-top:34px}}
 
-.translation-sentence{position:relative;display:inline-block;max-width:100%;vertical-align:baseline;cursor:help}
-.translated-text{border-bottom:1px dotted var(--line);transition:filter .16s ease,opacity .16s ease}
-.original-overlay{display:none;position:absolute;z-index:8;left:0;top:0;width:max-content;max-width:min(520px,80vw);padding:0 3px;background:rgba(244,241,233,.98);color:var(--ink);border-bottom:1px solid var(--accent);font:inherit;line-height:1.8;letter-spacing:.025em;white-space:normal;pointer-events:none}
-.translation-sentence:hover .translated-text,.translation-sentence:focus .translated-text{filter:blur(3px);opacity:.22}
-.translation-sentence:hover .original-overlay,.translation-sentence:focus .original-overlay{display:block}
-.translation-sentence:focus{outline:1px solid rgba(141,77,61,.45);outline-offset:3px;border-radius:2px}
+.translation-sentence{position:relative;border-bottom:1px dotted transparent;cursor:help}
+.translation-sentence:hover,.translation-sentence:focus{border-bottom-color:var(--accent);outline:none}
+.translation-sentence::after{content:attr(data-original);display:none;position:absolute;z-index:8;left:0;bottom:calc(100% + 9px);width:max-content;max-width:min(360px,80vw);max-height:40vh;overflow:auto;padding:11px 14px;border:1px solid var(--line);background:#fffdf8;color:var(--ink);box-shadow:0 5px 18px rgba(32,32,29,.15);font:400 15px/1.75 var(--serif);letter-spacing:.02em;white-space:normal}
+.translation-sentence:hover::after,.translation-sentence:focus::after{display:block}
